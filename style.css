@@ -1,29 +1,132 @@
 * {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif !important;
 }
 
+.open-sans-uniquifier> {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight:weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+
+  html, body {
+    scroll-behavior: smooth;
+  }
+
 header {
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    background-color: #ffffff;
+}
+
+.logo {
+    margin-left: 7rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
     position: relative;
-    width: 100%;
-    height: 150px;
-    background-color: rgb(255, 255, 255);
-    
+      font-size: 2rem;
+    font-weight: bold;
+}
+
+nav a::after {
+     content: "";
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 0;
+     height: 5px;
+     transition: 0.3s;
+    background-color: #494949;
+}
+
+nav a:hover::after {
+    width: 100%; 
+}
+
+nav a:hover {
+    color: #494949; 
 }
 
 #home {
     background-color: #D9D5D5;
     margin: 0;
     padding: 0;
+    height: 1100px;
 }
 
-.titulo-home {
-
+#home .titulo-home {
+    font-size: 72px;
+    color: #320E0E;
 }
 
-.nav-bar-lateral {
+#home .paragrafo-home {
+    font-size: 31px;
+    color: #320E0E;
+}
+
+#itchio {
+    background-color: #E74A4A;
+    margin: 0;
+    padding: 0;
+    height: 1080px;
+    border-radius: 50px 50px 0px 0px;
+    border-color: #494949 ;
+}
+
+#itchio .titulo-itchio {
+    font-size: 72px;
+}
+
+#itchio .paragrafo-itchio {
+    font-size: 31px;
+}
+
+#studio {
+    background-color: #216EEB;
+    margin: 0;
+    padding: 0;
+    height: 1080px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+#studio .titulo-studio {
+    font-size: 72px;
+}
+
+#studio .paragrafo-studio {
+    font-size: 31px;
+}
+
+#sociais {
+    background-color: #ECDB5A;
+    margin: 0;
+    padding: 0;
+    height: 1080px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+#sociais .titulo-sociais {
+    font-size: 72px;
+}
+
+#sociais .paragrafo-sociais {
+    font-size: 31px;
+}
+
+/* .nav-bar-lateral {
     display: flex;
     flex-direction: column;
     width: 100px;
@@ -32,7 +135,7 @@ header {
     justify-content: center;
     gap: 40px;
     padding: 200px 24px;
-    position: relative;
+    position: absolute;
     background-color: #9b9b9b;
     border-radius: 450px;
 }
@@ -71,4 +174,13 @@ header {
     height: 72px;
     margin-left: -10.00px;
     margin-right: -10.00px;
+} */
+
+footer {
+    background-color: #D9D5D5;
+}
+
+footer .footer-copy {
+    font-size: 26px;
+    margin-left: 1220px;
 }
