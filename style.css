@@ -1,44 +1,53 @@
 * {
-    font-family: 'IBM Plex Sans', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.open-sans-uniquifier> {
-    font-family: "Open Sans", serif;
-    font-optical-sizing: auto;
-    font-weight:weight;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-  }
-
   html, body {
+    font-family: "Open Sans", serif;
     scroll-behavior: smooth;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    /* padding-top: 40px; */
   }
 
 header {
+    background: #222;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;
-    background-color: #ffffff;
+    padding: 10px 20px;
+    width: 100vw;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; */
 }
 
 .logo {
-    margin-left: 7rem;
+    margin-left: 2rem;
+    width: 150px;
+    cursor: pointer;
 }
 
-nav {
+.nav-container {
+    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10rem;
+}
+
+.nav {
+    display: flex;
+    gap: 100px;
 }
 
 nav a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     position: relative;
-      font-size: 2rem;
-    font-weight: bold;
+    font-size: 2rem;
 }
 
 nav a::after {
@@ -49,7 +58,7 @@ nav a::after {
      width: 0;
      height: 5px;
      transition: 0.3s;
-    background-color: #494949;
+    background-color: #939191;
 }
 
 nav a:hover::after {
@@ -57,7 +66,7 @@ nav a:hover::after {
 }
 
 nav a:hover {
-    color: #494949; 
+    color: #939191; 
 }
 
 #home {
@@ -69,37 +78,37 @@ nav a:hover {
 
 #home .titulo-home {
     font-size: 72px;
-    color: #320E0E;
 }
 
 #home .paragrafo-home {
     font-size: 31px;
-    color: #320E0E;
 }
 
-#itchio {
-    background-color: #E74A4A;
+#personagens {
+    background-color: #fb4949;
     margin: 0;
     padding: 0;
     height: 1080px;
     border-radius: 50px 50px 0px 0px;
-    border-color: #494949 ;
+    box-shadow: -25px -25px 0px 32px #D9D5D5;
+    
 }
 
-#itchio .titulo-itchio {
+#personagens .titulo-personagens {
     font-size: 72px;
 }
 
-#itchio .paragrafo-itchio {
+#personagens .paragrafo-personagens {
     font-size: 31px;
 }
 
 #studio {
-    background-color: #216EEB;
+    /* background-color: #00aaff; */
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    height: 1080px;
     border-radius: 50px 50px 0px 0px;
+    box-shadow: -25px -25px 0px 32px #fb4949;
 }
 
 #studio .titulo-studio {
@@ -110,12 +119,115 @@ nav a:hover {
     font-size: 31px;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.coluna{
+    width: 100%;
+    height: 100%;
+    
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+}
+
+.card {
+    box-shadow: 0 0 2.2em rgba(25, 0, 58, 0.1);
+    padding: 3.5em 3.5em;
+    border-radius: 0.6em;
+    color: #1f003b;
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+
+.card .img-container {
+    width: 12em;
+    height: 12em;
+    background-color: #8b00ff;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+}
+
+.icons {
+    width: 25%;
+    min-width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2.5em;
+}
+
+.card:hover{
+    background: linear-gradient(#6045ea, #8567f7);
+    color: #ffffff;
+}
+
+.card:hover .img-container {
+    transform: scale(1.15);
+}
+
+.card:hover .icons {
+    transform: scale(1.15);
+}
+
+@media screen and (min-width: 768px){
+    section {
+        padding: 1em 7em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section {
+        padding: 1em;
+    }
+    .card{
+        padding: 5em 1em;
+    }
+    .coluna {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 1em 1em;
+    }
+}
+
 #sociais {
-    background-color: #ECDB5A;
+    background-color: #ffe800;
     margin: 0;
     padding: 0;
     height: 1080px;
     border-radius: 50px 50px 0px 0px;
+    box-shadow: -25px -25px 0px 32px #f5f5f5;
 }
 
 #sociais .titulo-sociais {
@@ -126,55 +238,6 @@ nav a:hover {
     font-size: 31px;
 }
 
-/* .nav-bar-lateral {
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-    height: 492px;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 200px 24px;
-    position: absolute;
-    background-color: #9b9b9b;
-    border-radius: 450px;
-}
-
-.nav-bar-lateral .home-button {
-    position: relative;
-    width: 72px;
-    height: 72px;
-    margin-top: -158.00px;
-    margin-left: -10.00px;
-    margin-right: -10.00px;
-}
-
-.nav-bar-lateral .frame {
-    margin-top: -46.00px;
-    position: relative;
-    width: 72px;
-    height: 72px;
-    margin-left: -10.00px;
-    margin-right: -10.00px;
-}
-
-.nav-bar-lateral .img {
-    margin-bottom: -46.00px;
-    position: relative;
-    width: 72px;
-    height: 72px;
-    margin-left: -10.00px;
-    margin-right: -10.00px;
-}
-
-.nav-bar-lateral .frame-2 {
-    margin-bottom: -158.00px;
-    position: relative;
-    width: 72px;
-    height: 72px;
-    margin-left: -10.00px;
-    margin-right: -10.00px;
-} */
 
 footer {
     background-color: #D9D5D5;
@@ -183,4 +246,8 @@ footer {
 footer .footer-copy {
     font-size: 26px;
     margin-left: 1220px;
+}
+
+footer .p {
+    justify-content: center;
 }
