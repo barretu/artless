@@ -32,9 +32,30 @@
             </div>
         </div>
     
+        <div class="dropdown-menu">
+            <li><a href="hero">Home</a></li>
+            <li><a href="personagens">Personagens</a></li>
+            <li><a href="studio">Studio</a></li>
+            <li><a href="sociais">Sociais</a></li>
+            <li><a href="https://itch.io/" class="action-btn">Instalar</a></li>
+        </div>
     
     </header>
 
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
     
     <section id="home">
         <div class="titulo-home">
@@ -213,7 +234,7 @@
                             <img src="img/Marcelo.jpeg" />
                         </div>
                         <h3>Marcelo Marinho</h3>
-                        <p></p>
+                        <p>GAME DESIGN</p>
                         <div class="icons">
                             <a href="https://www.linkedin.com/in/marcelo-marinho-a69325142/" target="_blank">
                                 <i class="fa-brands fa-linkedin"></i>

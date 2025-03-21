@@ -33,7 +33,6 @@ header {
 }
 
 .logo {
-    margin-left: 2rem;
     width: 150px;
     cursor: pointer;
 }
@@ -60,6 +59,7 @@ header {
     font: 0.8rem;
     font-weight: bold;
     cursor: pointer;
+    transition: scale 0.2 ease;
 }
 
 .action-btn:hover {
@@ -69,6 +69,63 @@ header {
 
 .action-btn:active {
     scale: 0.95;
+}
+
+/*DROPDOWN MENU*/
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 4rem;
+    top: 100px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 360px;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*DESIGN RESPONSIVO*/
+
+@media(max-width: 1150px) {
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown-menu {
+       display: block; 
+    }
+}
+
+@media(max-width: 576px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
 }
 
 li {
