@@ -15,63 +15,41 @@
     <title>Artless</title>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <a class="logo" href="index.html">
-                <img class="logo" src="./img/ArtLess Logo 03.png" alt="Logo" />
-            </a>
-            <ul class="links">
-                <li><a href="#home">Home</a></li>
+    <div class="hero">
+        <header id="header">
+            <div class="navbar">
+                <a class="logo" href="index.html">
+                    <img class="logo" src="./img/ArtLess Logo 03.png" alt="Logo" />
+                </a>
+                <ul class="links">
+                    <li><a href="#personagens">Personagens</a></li>
+                    <li><a href="#studio">Studio</a></li>
+                    <li><a href="#sociais">Sociais</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        
+            <div class="dropdown-menu">
                 <li><a href="#personagens">Personagens</a></li>
                 <li><a href="#studio">Studio</a></li>
                 <li><a href="#sociais">Sociais</a></li>
-            </ul>
-            <a href="https://itch.io/" class="action-btn" target="_blank">Instalar</a>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
+                <li><a href="https://jogos-digitais-unicap.itch.io/" class="action-btn" target="_blank">Instalar</a></li>
             </div>
-        </div>
+        
+        </header>
+        
+        <section id="home">
+            <!-- <div class="titulo-home">
+                <h1>
+                    Home
+                </h1>
+            </div> -->
+        </section>
+    </div>
     
-        <div class="dropdown-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#personagens">Personagens</a></li>
-            <li><a href="#studio">Studio</a></li>
-            <li><a href="#sociais">Sociais</a></li>
-            <li><a href="https://itch.io/" class="action-btn" target="_blank">Instalar</a></li>
-        </div>
-    
-    </header>
 
-    <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown-menu')
-
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
-
-            toggleBtnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark'
-            : 'fa-solid fa-bars'
-        }
-    </script>
-    
-    <section id="home">
-        <div class="titulo-home">
-            <h1>
-                Home
-            </h1>
-        </div>
-        <div class="paragrafo-home">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur <br>
-                adipiscing elit. Vivamus ut turpis ullamcorper <br>
-                ex volutpat dictum.   
-            </p>
-        </div>
-    </section>
-    
     <section id="personagens">
         <div class="titulo-personagens">
             <h1>
@@ -282,5 +260,7 @@
     <footer>
         <p class="footer-copy">&copy; 2025 All Right Reserved</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

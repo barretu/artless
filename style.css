@@ -13,13 +13,44 @@
     /* padding-top: 40px; */
   }
 
+  .hero {
+    background-image: url(/img/home_img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
 header {
-    position: relative;
-    padding: 0 2rem;
-    background: #222;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+header.scrolled {
+    background: white;
+    color: black;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header.scrolled .links a{
+    color: black;
+}
+
+header.scrolled .navbar .toggle_btn i{
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .navbar {
@@ -80,15 +111,15 @@ header {
     top: 100px;
     height: 0;
     width: 300px;
-    background: #222;
-    backdrop-filter: blur(15px);
+    background: white;
+    /* backdrop-filter: blur(15px); */
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown-menu.open {
-    height: 360px;
+    height: 300px;
 }
 
 .dropdown-menu li {
@@ -106,7 +137,7 @@ header {
 
 /*DESIGN RESPONSIVO*/
 
-@media(max-width: 1150px) {
+@media(max-width: 1200px) {
     .navbar .links,
     .navbar .action-btn {
         display: none;
@@ -132,15 +163,33 @@ li {
     list-style: none;
 }
 
-a {
+.dropdown-menu a {
     text-decoration: none;
-    color: #ffffff;
+    color: black;
     font-size: 2rem;
 }
 
+.navbar .links a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+}
 
-a:hover {
-    color: orange;
+.navbar .links a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 0; 
+    height: 4px; 
+    background: rgb(0, 0, 0); 
+    transition: width 0.3s ease;
+}
+
+.navbar .links a:hover::after {
+    width: 100%;
 }
 
 .nav {
@@ -149,19 +198,19 @@ a:hover {
 }
 
 #home {
-    background-color: #D9D5D5;
+    background-color: transparent;
     margin: 0;
     padding: 0;
-    height: 1100px;
+    height: 1250px;
 }
 
-#home .titulo-home {
+/* #home .titulo-home {
     font-size: 72px;
-}
-
-#home .paragrafo-home {
-    font-size: 31px;
-}
+    color: white;
+    position: absolute;
+    top: 1000px;
+    left: 500px;
+} */
 
 #personagens {
     background-color: #f5f5f5;
