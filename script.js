@@ -1,13 +1,16 @@
 window.addEventListener("scroll", function () {
     const header = document.getElementById("header");
     const toggleBtn = document.querySelector(".toggle_btn i");
+    const logoImg = document.getElementById("logo-img");
 
     if (!header) return;
 
     if (window.scrollY > 100) { 
         header.classList.add("scrolled");
+        logoImg.src = "./img/Logo - 01.png";
     } else {
-        header.classList.remove("scrolled"); 
+        header.classList.remove("scrolled");
+        logoImg.src = "./img/Logo - 02.png";
     }
 });
 
@@ -87,5 +90,8 @@ cards.forEach((cartao) => {
 });
 
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 
