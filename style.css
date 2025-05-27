@@ -264,25 +264,49 @@ header.scrolled .navbar .links a::after {
 
 #about {
     background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
     height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 60px;
+    padding: 0 40px;
 }
 
-#about .titulo-about {
-    font-size: 72px;
+.titulo-container {
+    text-align: center;
+    margin-top: 80px;
+}
+ 
+.titulo-about {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(to right, #8b00ff, #8567f7);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 48px;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease;
 }
 
+.paragrafo-about {
+    font-size: 32px;
+    margin: 60px auto 0 auto;
+    padding: 0 40px;
+    text-align: justify;
+}
 
 #characters {
     display: "";
-    background-color: #676666;
+    background-color: #f5f5f5;
     height: auto;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    text-align: center;
 }
 
 #characters::before {
@@ -295,8 +319,18 @@ header.scrolled .navbar .links a::after {
     pointer-events: none;
 }
 
-#characters .titulo-personagens {
-    font-size: 72px;
+#characters .titulo-characters {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(to right, #8b00ff, #8567f7);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 48px;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: transform 0.2s ease;
 }
 
 .container-1 {
@@ -359,7 +393,7 @@ header.scrolled .navbar .links a::after {
 }
 
 .cartao-front {
-    background: rgba(255, 255, 255, 0.1);
+    background: #676666;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -398,14 +432,25 @@ header.scrolled .navbar .links a::after {
 
 .icone-container {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     z-index: 1;
+    transform: translateY(-150px);
 }
+
+.icone-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));
+}
+
 
 .icone-bg {
     position: absolute;
@@ -421,13 +466,6 @@ header.scrolled .navbar .links a::after {
     transform: scale(1.1);
 }
 
-.icone {
-    position: relative;
-    font-size: 48px;
-    z-index: 2;
-    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));
-}
-
 h2 {
     margin-bottom: 15px;
     font-weight: 600;
@@ -439,14 +477,14 @@ h2 {
 }
 
 .cartao-front p {
-    font-size: 16px;
+    font-size: 32px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
-    font-weight: 300;
+    font-weight: 450;
 }
 
 .cartao-back p {
-    font-size: 17px;
+    font-size: 32px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
@@ -470,7 +508,7 @@ h2 {
     width: 400px;
     position: relative;
     bottom: 40px;
-    background: rgba(255, 255, 255, 0.15);
+    background: #676666;
     padding: 12px 0;
     border-radius: 30px;
     backdrop-filter: blur(10px);
@@ -545,17 +583,26 @@ h2 {
     border-radius: 50%;
 }
 
-/* keyframes */
-
 #trailer {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     height: 1080px;
+    text-align: center;
 }
 
 #trailer .titulo-trailer {
-    font-size: 72px;
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(to right, #8b00ff, #8567f7);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 48px;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: transform 0.2s ease;
 }
 
 #screenshots {
@@ -652,11 +699,20 @@ h2 {
     background-color: #929292;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-#studio .titulo-studio {
-    font-size: 72px;
-    color: white;
+#studio .img-studio {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#studio .img-studio img{
+    max-width: 100%;
+    height: auto;
+    width: 550px;
+    margin: 0em auto;
+    display: block;
 }
 
 #studio .paragrafo-studio {
@@ -745,8 +801,6 @@ h2 {
 .card:hover .icons {
     transform: scale(1.15);
 }
-
-
 
 
 @media screen and (min-width: 320px){
