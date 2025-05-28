@@ -117,8 +117,23 @@ modal.addEventListener('click', e => {
 
 
 // BOTAO PRA VOLTAR PRO TOPO
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 100) {
+    scrollTopBtn.classList.remove('hidden');
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+    scrollTopBtn.classList.add('hidden');
+  }
+});
+
+// Inicialmente, esconde o botão
+scrollTopBtn.classList.add('hidden');
 
 
