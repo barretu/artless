@@ -32,4 +32,3 @@ function onPlayerReady(event) {
     });
 }
 
-// GG
