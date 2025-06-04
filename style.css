@@ -474,14 +474,14 @@ header.scrolled .navbar .links a::after {
 
 .icone-container {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
     z-index: 1;
-    transform: translateY(-80px);
+    transform: translateY(-50px);
 }
 
 .icone-img {
@@ -519,7 +519,7 @@ h2 {
 }
 
 .cartao-front p {
-    font-size: 32px;
+    font-size: 20px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
     font-weight: 450;
@@ -973,60 +973,68 @@ h2 {
 
 .footer {
   background-color: #f9f9f9;
-  padding: 40px 20px 20px;
-  font-family: 'Arial', sans-serif;
   color: #333;
+  font-family: "Open Sans", serif;
+  padding: 2rem 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto 20px;
+  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Logo */
-.footer-logos {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.footer-brand, 
+.footer-address, 
+.footer-social {
   flex: 1;
-  min-width: 200px;
+  min-width: 250px;
 }
 
-.footer-logos img.logo {
-  width: 250px;
+.footer-brand {
+  display: flex;
+  justify-content: flex-start;
+  height: 150px;
+  width: auto;
+}
+
+.main-logo {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
 }
 
 .footer-address {
-  flex: 1;
   text-align: center;
-  font-size: 24px;
-  min-width: 200px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .footer-social {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  min-width: 200px;
 }
 
-.footer-social .connect-title {
+.connect-title {
   font-weight: bold;
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .social-icons {
   display: flex;
-  gap: 30px;
-  font-size: 48px;
+  gap: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .social-icons a {
@@ -1038,108 +1046,71 @@ h2 {
   color: #8b00ff;
 }
 
+.footer-partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.partner-logo {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
 
 .footer-bottom {
   text-align: center;
-  font-size: 32px;
+  font-size: 1.5rem;
   color: #777;
-  margin-top: 20px;
-  padding-top: 10px;
+  padding-top: 1rem;
 }
 
-@media (max-width: 320px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-logos,
-  .footer-address,
-  .footer-social {
-    align-items: center;
-    justify-content: center;
-    min-width: 100%;
-  }
-
-  .footer-social {
-    align-items: center;
-  }
-}
-
-@media (max-width: 375px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-logos,
-  .footer-address,
-  .footer-social {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .footer-social {
-    align-items: center;
-  }
-}
-
-@media (max-width: 425px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-logos,
-  .footer-address,
-  .footer-social {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .footer-social {
-    align-items: center;
-  }
-}
-
+/* Media Queries */
 @media (max-width: 768px) {
   .footer-top {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-brand, 
+  .footer-address, 
+  .footer-social {
+    align-items: center;
     text-align: center;
   }
-
-  .footer-logos,
-  .footer-address,
+  
   .footer-social {
     align-items: center;
+  }
+  
+  .footer-brand {
     justify-content: center;
   }
-
-  .footer-social {
-    align-items: center;
+  
+  .partner-logo {
+    height: 50px;
+    max-width: 150px;
   }
 }
 
-@media (max-width: 992px) {
-  .footer-top {
+@media (max-width: 480px) {
+  .footer-partners {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 1rem;
   }
-
-  .footer-logos,
-  .footer-address,
-  .footer-social {
-    align-items: center;
-    justify-content: center;
+  
+  .connect-title {
+    font-size: 1.1rem;
   }
-
-  .footer-social {
-    align-items: center;
+  
+  .social-icons {
+    font-size: 1.25rem;
+    gap: 1rem;
   }
 }
 
